@@ -108,7 +108,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNP-Yj-05Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="642"/>
+            <point key="canvasLocation" x="1359" y="642"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3kq-TQ-yBz">
@@ -128,11 +128,14 @@
             </objects>
             <point key="canvasLocation" x="-107" y="312"/>
         </scene>
-        <!--Item 1-->
+        <!--Survey-->
         <scene sceneID="MeE-yI-Jhw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zO5-yZ-clr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="1bg-sc-nZb"/>
+                    <tabBarItem key="tabBarItem" title="Survey" image="Survey-50" selectedImage="Survey-50" id="1bg-sc-nZb">
+                        <inset key="imageInsets" minX="5" minY="8" maxX="5" maxY="2"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="-6" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EbD-hX-MMj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -147,11 +150,13 @@
             </objects>
             <point key="canvasLocation" x="713" y="-19"/>
         </scene>
-        <!--Item 2-->
+        <!--Responses-->
         <scene sceneID="HFm-x5-2h9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gKL-Ad-AQT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="u1a-3K-FxA"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Responses" image="Response-50" id="u1a-3K-FxA">
+                        <inset key="imageInsets" minX="6" minY="8" maxX="6" maxY="6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Osr-ue-C9O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -164,7 +169,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tub-vH-PHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="642"/>
+            <point key="canvasLocation" x="713" y="642"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Response-50" width="50" height="50"/>
+        <image name="Survey-50" width="50" height="50"/>
+    </resources>
 </document>
