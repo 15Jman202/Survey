@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Survey View Controller-->
         <scene sceneID="isF-Pf-5Ej">
             <objects>
-                <viewController id="Ypm-Ki-eQc" sceneMemberID="viewController">
+                <viewController id="Ypm-Ki-eQc" customClass="SurveyViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sVm-BC-ynm"/>
                         <viewControllerLayoutGuide type="bottom" id="dyv-cv-Ne2"/>
@@ -20,35 +20,46 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Favorite Movie" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HhO-wj-UoM">
                                 <rect key="frame" x="30" y="104" width="540" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="DDi-zc-2Iq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xy6-SF-Kat">
+                                <rect key="frame" x="30" y="153" width="540" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ZMY-4U-aQx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56D-dw-FA2">
-                                <rect key="frame" x="29.5" y="206" width="540" height="30"/>
+                                <rect key="frame" x="30" y="206" width="540" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="SubmitButtonTapped:" destination="Ypm-Ki-eQc" eventType="touchUpInside" id="z7E-md-5H7"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xy6-SF-Kat">
-                                <rect key="frame" x="30" y="153" width="540" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="top" secondItem="HhO-wj-UoM" secondAttribute="bottom" constant="17" id="8bP-xE-ppa"/>
-                            <constraint firstItem="56D-dw-FA2" firstAttribute="width" secondItem="Xy6-SF-Kat" secondAttribute="width" id="9Ei-Io-Gm4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HhO-wj-UoM" secondAttribute="trailing" constant="10" id="EJn-GD-zjD"/>
-                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="height" secondItem="HhO-wj-UoM" secondAttribute="height" id="KEA-N4-IiW"/>
-                            <constraint firstItem="HhO-wj-UoM" firstAttribute="leading" secondItem="TPQ-6D-b8w" secondAttribute="leadingMargin" constant="10" id="QFq-Vz-3vE"/>
-                            <constraint firstItem="56D-dw-FA2" firstAttribute="centerX" secondItem="Xy6-SF-Kat" secondAttribute="centerX" id="ZZx-gd-gdq"/>
-                            <constraint firstItem="HhO-wj-UoM" firstAttribute="top" secondItem="sVm-BC-ynm" secondAttribute="bottom" constant="40" id="aBC-yA-dDp"/>
-                            <constraint firstItem="56D-dw-FA2" firstAttribute="top" secondItem="Xy6-SF-Kat" secondAttribute="bottom" constant="21" id="fLZ-ur-Nun"/>
-                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="width" secondItem="HhO-wj-UoM" secondAttribute="width" id="laY-e3-xxu"/>
-                            <constraint firstItem="dyv-cv-Ne2" firstAttribute="top" secondItem="HhO-wj-UoM" secondAttribute="bottom" constant="415" id="mBY-z0-for"/>
-                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="centerX" secondItem="HhO-wj-UoM" secondAttribute="centerX" id="sVZ-ao-8eW"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="trailing" secondItem="HhO-wj-UoM" secondAttribute="trailing" id="3lE-M6-KUt"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="leading" secondItem="TPQ-6D-b8w" secondAttribute="leadingMargin" constant="10" id="S7c-Gp-MN6"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="leading" secondItem="56D-dw-FA2" secondAttribute="leading" id="SeK-hP-QCx"/>
+                            <constraint firstItem="56D-dw-FA2" firstAttribute="top" secondItem="Xy6-SF-Kat" secondAttribute="bottom" constant="21" id="fYP-zU-OrU"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="centerX" secondItem="TPQ-6D-b8w" secondAttribute="centerX" id="flb-XL-vkL"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="leading" secondItem="HhO-wj-UoM" secondAttribute="leading" id="qZn-Ys-kWu"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="top" secondItem="TPQ-6D-b8w" secondAttribute="top" constant="153" id="sQb-UT-RFX"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="top" secondItem="HhO-wj-UoM" secondAttribute="bottom" constant="17" id="vvR-FL-iC3"/>
+                            <constraint firstItem="Xy6-SF-Kat" firstAttribute="trailing" secondItem="56D-dw-FA2" secondAttribute="trailing" id="zkh-HG-vJF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pmF-dO-FMX"/>
+                    <connections>
+                        <outlet property="favMovieTextField" destination="HhO-wj-UoM" id="G5d-vz-dOG"/>
+                        <outlet property="nameTextField" destination="Xy6-SF-Kat" id="13Y-tx-Cse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJj-H8-OGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +68,7 @@
         <!--Favorite Movies-->
         <scene sceneID="0dm-XN-GaK">
             <objects>
-                <tableViewController id="mJm-I2-2mp" sceneMemberID="viewController">
+                <tableViewController id="mJm-I2-2mp" customClass="ResponseTableViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rdM-99-laN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

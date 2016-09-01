@@ -10,26 +10,28 @@ import UIKit
 
 class SurveyViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func SubmitButtonTapped(sender: AnyObject) {
+        guard let favMovie = favMovieTextField.text, name = nameTextField.text where !favMovie.isEmpty && !name.isEmpty else {
+            print("Nothing in the text fields")
+            return }
+        let survey = Survey(name: name, response: favMovie)
+        
+        favMovieTextField.text = ""
+        nameTextField.text = ""
+        
+        SurveyController.putSurvey(survey) { (success) in
+            if success == false {
+                print("Error Putting Surveys")
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var favMovieTextField: UITextField!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
-    */
-
 }
